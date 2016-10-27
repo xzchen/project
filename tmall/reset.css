@@ -1,0 +1,26 @@
+body, h1, h2, h3, h4, h5, h6, hr, p, blockquote, dl, dt, dd, ul, ol, li, pre, form, fieldset, legend, button, input, textarea, th, td {
+    margin: 0;
+    padding: 0;
+}
+
+ul, ol, li {
+	list-style: none;
+}
+
+a {
+	text-decoration: none;
+	cursor: pointer;
+}
+
+a:link,
+a:visited {
+	color: #999;
+}
+
+a:hover {
+	color: #c40000;
+}
+
+input:focus {
+	outline: none;
+}

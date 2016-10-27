@@ -1,0 +1,133 @@
+html, body, header, h2, p, ol, li,input {
+	margin:0;
+	padding: 0;
+}
+
+html, body {
+	height: calc(100% - 30px);
+}
+
+.header {
+	height: 60px;
+	background-color: #323232;
+}
+
+.container {
+	width: 600px;
+	line-height: 60px;
+	margin: 0 auto;
+}
+
+.container label{
+	font-size: 24px;
+	color: #fff;
+	    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+
+.container input {
+	float: right;
+	width: 360px;
+	height: 24px;
+	border-radius: 5px;
+	margin-top: 18px;
+	text-indent: 10px;
+	outline: none;
+}
+
+.background {
+	height: 100%;
+	background-color: #ccc;
+}
+
+.displayPage {
+	width: 600px;
+	margin:0px auto;
+}
+
+.displayPage h2 {
+	padding-top: 20px;
+}
+
+.displayPage li {
+	position: relative;
+	width: 100%;
+	height: 30px;
+	border-radius: 3px;
+	margin-top: 10px;
+	font-size: 22px;
+	text-indent: 45px;
+	background-color: #fff;
+	box-shadow: 2px 6px 12px #ccc;
+
+}
+
+.displayPage li:before {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 0;
+	left: -5px;
+	width: 5px;
+	height: 30px;
+	border-radius: 5px 0 0 5px;
+	background-color: #5e9a9c;
+
+}
+
+.displayPage li input {
+	position: absolute;
+	top: 3px;
+	left: 15px;
+	width: 22px;
+	height: 22px;
+	vertical-align: middle;
+}
+
+.displayPage li p {
+	color: #000;
+	font-size: 16px;
+	line-height: 30px;
+}
+
+.displayPage li span {
+	position: absolute;
+	top: 3px;
+	right: 10px;
+	width: 18px;
+	height: 18px;
+	border:2px solid #ccc;
+	border-radius: 100%;
+}
+
+.displayPage li span:before {
+	content: "";
+	position: absolute;
+	top: 2px;
+	left: 2px;
+	width: 14px;
+	height: 14px;
+	background-color: #ccc;
+	border-radius: 100%;
+}
+
+.displayPage li span:after {
+	content: "";
+	position: absolute;
+	top: 8px;
+	left: 4px;
+	width: 10px;
+	height: 2px;
+	background-color: #fff;
+}
+
+
+/*计数span*/
+.displayPage > span{
+	float: right;
+	margin-top: -20px;
+	width: 20px;
+	height: 20px;
+	border-radius: 100%;
+	text-align: center;
+	background-color: #e6e6fa;
+}
