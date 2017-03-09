@@ -109,7 +109,6 @@ html, body {
 .aside .card-footer {
 	padding-top: 57px;
 	font-size: 14px;
-	line-height: 0;
 	bottom: 0;
 	padding-bottom: 0;
 }
@@ -123,7 +122,6 @@ html, body {
 }
 
 .card-footer span {
-
 	vertical-align: middle;
 }
 
