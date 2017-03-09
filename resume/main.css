@@ -1,0 +1,168 @@
+html, body {
+	margin: 0;
+	padding: 0;
+	/*width: 2480px;
+	height: 3508px;*/
+}
+
+.home {
+	min-width: 1200px;
+	background-color: #a8ddb5;
+}
+
+.main {
+	background: #ccebc5;
+}
+
+/*左侧个人简介*/
+.aside {
+	color:#fff;
+	min-width: 285px;
+}
+
+.aside .card,
+.card-footer {
+	border:none;
+	background-color:#a8ddb5;
+	color:#fff;
+}
+
+
+.aside .card-block,
+.aside .card-title {
+	padding-right: 0;
+	padding-left: 0;
+	border-bottom: 3px solid #306f69;
+}
+
+.aside .card-block {
+	border-bottom-width: 1px;
+}
+
+/*姓名部分*/
+.name .card-title {
+	padding-bottom: 15px;
+}
+
+.name .card-text,
+.skill {
+	color: #306f60;
+}
+
+/*个人信息*/
+.info {
+	padding-left: 20px;
+}
+
+.info p {
+	color: #fff;
+}
+
+.info span,
+.skill span {
+	display: inline-block;
+	text-align: right;
+	width: 90px;
+
+}
+
+.skill {
+	color:#;
+}
+
+.skill i {
+	display: inline-block;
+	width: 155px;
+	height: 20px;
+	margin-left: 6px;
+	border-radius: .5rem;
+	background-color: #94d6a4;
+	vertical-align: middle;
+}
+
+.skill i:after {
+	content: "";
+	display: block;
+	height: 100%;
+	width: 80%;
+	border-radius: .5rem;
+	background-color: #306f60;
+}
+
+.skill > p:nth-child(1)  i:after{
+	width: 85%;
+}
+.skill > p:nth-child(2)  i:after{
+	width: 80%;
+}
+.skill > p:nth-child(3)  i:after{
+	width: 90%;
+}
+.skill > p:nth-child(4)  i:after{
+	width: 65%;
+}
+.skill > p:nth-child(5)  i:after{
+	width: 60%;
+}
+
+/*footer信息*/
+.aside .card-footer {
+	padding-top: 57px;
+	font-size: 14px;
+	line-height: 0;
+	bottom: 0;
+	padding-bottom: 0;
+}
+
+.aside .card-footer a {
+	color:#fff;
+} 
+
+.card-footer a i:hover {
+	color: #16736b;
+}
+
+.card-footer span {
+
+	vertical-align: middle;
+}
+
+.main {
+	color:#000;
+	background-color: #bae3c3;
+	background-color: #e3eff3;
+}
+
+/*文字简述*/
+.main .card {
+	background-color: #e3eff3;
+	border:none;
+}
+	
+.main .card-title {
+	font-weight: 700;
+}
+
+.main dt a {
+	color: #5dc3bb;
+	color:#94d6a4;
+	color:#a8ddb5;
+	text-decoration: underline;
+	color:#1dc546;
+
+}
+
+/*.main dt span {
+	color: #fff;
+	font-size: .75rem;
+}*/
+
+/* .main dt span {
+	float: right;
+	background: #000;
+	background-color:#a8ddb5;
+	margin-left: 10px;
+	padding: 3px 5px;
+	color:#306f60;
+}
+ */

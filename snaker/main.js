@@ -87,18 +87,19 @@ window.onload = function () {
 			if (snake.flag === "true") {
 				return;
 			}
-			var ev = event || window.ev;
-			if (ev.keyCode >= 37 && ev.keyCode <= 40) {
+			ev = ev || window.event;
+			var keyCode = ev.keyCode || ev.which || ev.charCode
+			if (keyCode >= 37 && keyCode <= 40) {
 				if (snake.flag === "true") {
 					clearInterval(delayTimer);
 					return;
 				}
 			}
 			if (snake.direction == 0 || snake.direction == 2) {
-				if (ev.keyCode == 37) {
-					clearInterval(timer);
+				if (keyCode == 37) {
 					clearInterval(delayTimer);
 					setTimeout(function(){
+						clearInterval(timer);
 						timer = setInterval(function(){
 							if (snake.flag === "true") {
 								clearInterval(timer)
@@ -108,12 +109,13 @@ window.onload = function () {
 								move(snake.direction, -1);
 							}
 						},300);
-					},1)
+					},300)
 				}
-				if (ev.keyCode == 39) {
-					clearInterval(timer);
+				if (keyCode == 39) {
+					
 					clearInterval(delayTimer);
 					setTimeout(function(){
+						clearInterval(timer);
 						timer = setInterval(function(){
 							if (snake.flag === "true") {
 								clearInterval(timer)
@@ -123,14 +125,16 @@ window.onload = function () {
 								move(snake.direction, 1);
 							}
 						},300);
-					},1)
+					},300)
 				}
 			}
 			else {
-				if (ev.keyCode == 38) {
-					clearInterval(timer);
+				if (keyCode == 38) {
 					clearInterval(delayTimer);
+					
+					
 					setTimeout(function(){
+						clearInterval(timer);
 						timer = setInterval(function(){
 							if (snake.flag === "true") {
 								clearInterval(timer)
@@ -140,12 +144,12 @@ window.onload = function () {
 								move(snake.direction, -1);
 							}
 						},300);
-					},1)
+					},300)
 				}
-				if (ev.keyCode == 40) {
-					clearInterval(timer);
+				if (keyCode == 40) {
 					clearInterval(delayTimer);
 					setTimeout(function(){
+						clearInterval(timer);
 						timer = setInterval(function(){
 							if (snake.flag === "true") {
 								clearInterval(timer)
@@ -155,7 +159,7 @@ window.onload = function () {
 								move(snake.direction, 1);
 							}
 						},300);
-					},1)
+					},300)
 				}
 			}
 		}

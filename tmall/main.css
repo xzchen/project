@@ -1007,7 +1007,7 @@ nav li:hover .hover-pic {
 /*--按照频道分列*/
 .channel {
 	overflow: hidden;
-	height: 476px;
+	height: 475px;
 	font-family: "Microsoft YaHei",SimSun,'\5b8b\4f53',sans-serif;
 }
 /*存在5列的时候（每列width:238px;margin-right:10px;将最后1列mr:0;）存在四列的时候设置channel的宽度加10*/
@@ -1070,7 +1070,7 @@ nav li:hover .hover-pic {
 	font:18px/18px "Microsoft YaHei",SimSun,'\5b8b\4f53',sans-serif;
 }
 .anchor {
-	height: 440px;
+	height: 470px;
 	overflow: hidden;
 	padding-top: 30px;
 }
@@ -1114,11 +1114,59 @@ nav li:hover .hover-pic {
 	float: left;
 	width: 246px;
 	height: 440px;
+	text-align: center;
+	overflow: hidden;
+	color: #fff!important;
 }
-
 .anchor-banner > img {
 	width: 246px;
 	height: 330px;
+}
+.anchor-banner-text {
+	position: relative;
+	overflow: hidden;
+	height: 30px;
+	margin-top: -30px;
+	line-height: 30px;
+	font-size: 14px;
+	background-color: rgba(255, 255, 255, .8);
+	color: #000;
+}
+.anchor-banner-text:hover {
+	color: #dd2727;
+}
+.anchor-banner-title {
+	height: 110px;
+	padding-top: 20px;
+}
+.anchor-banner-title h3 {
+	font-size: 22px;
+	line-height: 33px;
+}
+.anchor-banner-title p {
+	font-size: 18px;
+	line-height: 27px;
+}
+.anchor-banner-title div {
+	background-color: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIsAAAAgBAMAAADQ7JbhAAAAElBMVEUAAAAAAAAAAAAAAAAAAAAAAADgKxmiAAAABnRSTlMUAAQLDwdsKrbGAAAAoUlEQVRIx5zTQQ7CMAxE0a827ONS9u0NDOIAKSeA+18GlSgWm1aavJU3sUYZGbPpSXpYj3ibMXOAV9+WAnDf18xQ5w7OLu1rCj+j6a5UW2aC7jhONWRmqC6mukGVMplmNdFCk4mZQa2JsOA0yTQzwXHCZpJCcAphVNsOhX8fE7w5MkgffGyV2hbiaGHki3BOfWeqRAxQNWAYBaNgFIwCEgEAOu9AM8VSluwAAAAASUVORK5CYII=)
+}
+#anchor1 .anchor-banner-title {
+	background-color: #ea5f8d;
+}
+#anchor2 .anchor-banner-title { 
+	background-color: #64c333;
+}
+#anchor3 .anchor-banner-title {
+	background-color: #f7a945;
+}
+#anchor4 .anchor-banner-title {
+	background-color: #18c8a9;
+}
+#anchor5 .anchor-banner-title {
+	background-color: #f15453;
+}
+#anchor6 .anchor-banner-title {
+	background-color: #0aa6e8;
 }
 
 /*每个anchor下的四列。排除左边banner图*/
@@ -1169,6 +1217,82 @@ nav li:hover .hover-pic {
 	height: 100px;
 }
 /*左侧锚链接控制滚动部分--*/
+
+
+/*--footer部分，当window.innerWidth <= 1210 其下footer-wcommon宽度为990。否则为1190*/
+.footer-wcommon {
+	width: 1190px;
+	margin: auto;
+}
+.w1210 .footer-wcommon {
+	width: 990px;
+}
+
+/*--.tmall-ensure*/
+.tmall-ensure {
+	height: 100px;
+	margin: 25px auto 47px;
+	background-color: red;
+	background:url(https://img.alicdn.com/tps/i1/T1ZjhhFpRkXXX1CdwH-1190-100.jpg);
+}
+.w1210 .tmall-ensure {
+	background: url(https://img.alicdn.com/tps/i2/T1vYemFC0eXXcnC4Lh-990-100.jpg);
+}
+
+/*.tmall-desc*/
+.tmall-desc {
+	height: 190px;
+	font-family: "Microsoft YaHei",tahoma,arial,'Hiragino Sans GB','\5b8b\4f53',sans-serif;
+}
+.tmall-desc dl {
+	float: left;
+	width: 186px;
+	padding-left: 52px;
+}
+.w1210 .tmall-desc dl {
+	width: 200px;
+	padding-left: 15px;
+}
+.w1210 .tmall-desc .mobile {
+	width: 110px;
+}
+.tmall-desc dt {
+	font-weight: 700;
+	font-size: 16px;
+	line-height: 30px;
+	color: #646464;
+}
+.tmall-desc a {
+	line-height: 20px;
+	color: #8b8b8b;
+}
+
+/*--版权信息等.copryright*/
+.copyright {
+	
+	border-top: 2px solid #c40000;
+	background-color: #000;
+	color: #fff;
+	line-height: 35px;
+}
+
+.tmall-info a,
+.other-link a {
+	color: #fff;
+}
+.tmall-copyright {
+	color: #a4a4a4;
+	line-height: 16px;
+}
+.tmall-copyright a {
+	display: inline-block;
+	margin-right: 65px;
+}
+.tmall-copyright a:hover {
+	color:#a4a4a4;
+}
+/*--footer部分，当window.innerWidth <= 1210 其下footer-wcommon宽度为990。否则为1170*/
+
 
 /*固定位置出现的。。*/
 @keyframes changeTop{
@@ -1233,7 +1357,7 @@ nav li:hover .hover-pic {
 }
 
 /*右边锚链接的滚动条*/
-.scroll-bar {
+.anchor-bar {
 	position: fixed;
 	bottom: 50px;
 	left: 1px;
@@ -1243,7 +1367,9 @@ nav li:hover .hover-pic {
 	font-family: "Microsoft YaHei",SimSun,'\5b8b\4f53',sans-serif;
 }
 
-.scroll-bar li {
+
+
+.anchor-bar li {
 	width: 36px;	
 	height: 36px;
 	margin-top: 1px;
@@ -1251,7 +1377,16 @@ nav li:hover .hover-pic {
 	text-align: center;
 	color: #fff;
 }
-.scroll-bar a {
+.anchor-bar input {
+	position: absolute;
+	display: none;
+	width: 36px;
+	height: 36px;
+	margin-left:-6px;
+	opacity: 0;
+	cursor: pointer;
+}
+.anchor-bar a {
 	display: block;
 	width: 24px;
 	height: 28px;
@@ -1259,35 +1394,48 @@ nav li:hover .hover-pic {
 	padding: 4px 6px;
 	color: #fff;
 }
-.scroll-bar li i {
+.anchor-bar li i {
 	display: block;
 	width: 36px;
 	padding-top: 5px;
 	font-size: 18px;
 	line-height: 13px;
 }
-.scroll-bar li:nth-child(2) a:hover {
-	background-color: #f7a945;
-}
-.scroll-bar li:nth-child(3) a:hover {
-	background-color: #19c8a9;
-}
-.scroll-bar li:nth-child(4) a:hover {
-	background-color: #f15453;
-}
-.scroll-bar li:nth-child(5) a:hover {
-	background-color: #64c333;
-}
-.scroll-bar li:nth-child(6) a:hover {
-	background-color: #0aa6e8;
-}
-.scroll-bar li:nth-child(7) a:hover {
+
+.anchor-bar li:nth-child(2):hover a,
+.anchor-bar li:nth-child(2) input:checked + a {
 	background-color: #ea5f8d;
 }
-.scroll-bar li:nth-child(8) a:hover,
-.scroll-bar li:nth-child(9) a:hover{
+.anchor-bar li:nth-child(3):hover a,
+.anchor-bar li:nth-child(3) input:checked + a {
+	background-color: #64c333;
+}
+.anchor-bar li:nth-child(4):hover a,
+.anchor-bar li:nth-child(4) input:checked + a{
+	background-color: #f7a945;
+}
+.anchor-bar li:nth-child(5):hover a,
+.anchor-bar li:nth-child(5) input:checked + a{
+	background-color: #19c8a9;
+}
+.anchor-bar li:nth-child(6):hover a,
+.anchor-bar li:nth-child(6) input:checked + a{
+	background-color: #f15453;
+}
+.anchor-bar li:nth-child(7):hover a,
+.anchor-bar li:nth-child(7) input:checked + a{
+	background-color: #0aa6e8;
+}
+.anchor-bar li:nth-child(8):hover a,
+.anchor-bar li:nth-child(9):hover a{
 	background-color: #000;
 }
+
+.anchor-bar li:nth-child(8) input:checked + a,
+.anchor-bar li:nth-child(9) input:checked + a {
+	background-color: #dd2727;
+}
+
 
 
 
