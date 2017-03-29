@@ -1,4 +1,4 @@
-
+@charset "utf-8";
 /* @font-face {font-family: 'iconfont';
     src: url('iconfont.eot'); IE9
     src: url('iconfont.eot?#iefix') format('embedded-opentype'), IE6-IE8
@@ -153,12 +153,12 @@ header {
 /*--网站导航部分*/
 /*整个网站导航hover状态出现的div宽度可变。根据我们当前屏幕的不同切换宽度（.w1230/.w990是通过js给body添加的className）*/
 .website-nav {
+	z-index: 4;
 	overflow: hidden;
 	width: 1198px;
 	padding: 25px 0;
 	margin-left: -1108px;
 	background-color: #fff;
-	z-index: 1;
 }
 
 .w1230 .collection-list .wcommon {
@@ -1305,7 +1305,6 @@ nav li:hover .hover-pic {
 }
 /*固定的头部*/
 .header-bar {
-	position: fixed;
 	top: -50px;
 	width: 100%;
 	height: 50px;

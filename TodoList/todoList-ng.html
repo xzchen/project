@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="todoList">
+<head>
+	<meta charset="UTF-8">
+	<title>todoList-ng</title>
+	<style type="text/css">
+		body, html {
+			padding: 0;
+			margin: 0;
+		}
+
+		header {
+			background-color: #323232;
+			height: 65px;
+			color: #fff; 
+			line-height: 65px;
+		}
+
+		.container {
+			width: 600px;
+			margin: 0 auto;
+		}
+	
+		h3 {
+			display: inline-block;
+			margin: 0;
+			font-size: 24px;
+			line-height: 65px;
+
+		}
+
+		.container input {
+			float: right;
+			width: 360px;
+			height: 24px;
+			border-radius: 5px;
+			margin-top: 18px;
+			outline: 0;
+			text-indent: 10px;
+		}
+
+		.todo-true {
+			text-decoration: line-through;
+			color: lightgray;
+		}
+	
+	</style> 
+</head>
+<body ng-controller="ctrl">
+	<header>
+		<div class="container">
+			<h3>TodoList</h3>
+			<input type="text" ng-model="todoText" ng-keyup="submit()">
+		</div>
+		
+	</header>
+	
+	<p><span>{{remaining()}}</span> of <span>{{todos.length}}</span> remaining [<a href="javascript:;" ng-click="archive()">archive</a>]</p>
+	
+	
+	<ol>
+		<li ng-repeat="todo in todos">
+			<input type="checkbox" ng-model="todo.done"><span class="todo-{{todo.done}}">{{todo.text}}</span>
+		</li>
+	</ol>
+
+	<script src="http://cdn.bootcss.com/angular.js/1.5.8/angular.min.js"></script>
+	<script type="text/javascript"></script>
+	<script type="text/javascript">
+		var app = angular.module("todoList", []);
+		app.controller("ctrl", function ($scope) {
+			$scope.todos = [{text:"learn Angular", done:false}, {text:"learn guitar", done:true}, {text:"good style", done:false}];
+			$scope.remaining = function () {
+				var count = 0;
+				angular.forEach($scope.todos, function(todo) {
+					count += todo.done ? 0 : 1;
+				})
+				return count;
+			}
+
+			$scope.submit = function (ev) {
+				var ev = ev || event;
+				if (ev.keyCode == 13) {
+					var newTodo = {done:false};
+					newTodo.text = $scope.todoText;
+					$scope.todoText = "";
+					$scope.todos.push(newTodo)
+				}
+			}
+
+			$scope.archive = function () {
+				var oldTodo = $scope.todos;
+				$scope.todos = [];
+				angular.forEach(oldTodo, function(todo) {
+					if (!todo.done) {
+						$scope.todos.push(todo)
+					}
+				})
+			}
+		})
+
+	</script>
+</body>
+</html>

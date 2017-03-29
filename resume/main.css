@@ -1,168 +1,163 @@
-html, body {
-	margin: 0;
-	padding: 0;
-	/*width: 2480px;
-	height: 3508px;*/
+body {
+	color: #202020;
 }
-
-.home {
+.container {
 	min-width: 1200px;
-	background-color: #a8ddb5;
+}
+aside.card {
+	border:0;
+}
+.card-block {
+	flex: 0 1 auto;
+}
+a {
+	color: inherit;
+}
+a:hover,
+a:visited{
+	color:inherit;
 }
 
-.main {
-	background: #ccebc5;
+/*aside部分*/
+aside.card{
+	padding: 15px 20px;
+	background-color: #9d9d9d;
 }
 
-/*左侧个人简介*/
-.aside {
-	color:#fff;
-	min-width: 285px;
+.card-footer,
+.card-header {
+	background-color: inherit;
+	border-width: 3px;
+	border-color: #bcbcbc;
+	color: #f4f4f4;
 }
 
-.aside .card,
-.card-footer {
-	border:none;
-	background-color:#a8ddb5;
-	color:#fff;
+.card-header {
+	margin-bottom: 100px;
 }
 
-
-.aside .card-block,
-.aside .card-title {
-	padding-right: 0;
-	padding-left: 0;
-	border-bottom: 3px solid #306f69;
-}
-
-.aside .card-block {
-	border-bottom-width: 1px;
-}
-
-/*姓名部分*/
-.name .card-title {
-	padding-bottom: 15px;
-}
-
-.name .card-text,
+.info,
 .skill {
-	color: #306f60;
+	padding: 20px 0;
+	margin-top: 100px;
 }
 
-/*个人信息*/
 .info {
-	padding-left: 20px;
+	border-top: 2px solid #bcbcbc;
+	border-bottom: 2px solid #bcbcbc;
+	color: #f4f4f4;
+	padding: 100px 0;
+	
 }
 
-.info p {
-	color: #fff;
+/*个人信息、技能评估*/
+aside dl {
+	font-size: 0;
+	margin: 0;
 }
-
-.info span,
-.skill span {
+aside dt {
 	display: inline-block;
+	width: 105px;
+	font-size: 1rem;
 	text-align: right;
-	width: 90px;
-
 }
-
-.skill {
-	color:#;
-}
-
-.skill i {
+aside dd {
 	display: inline-block;
-	width: 155px;
-	height: 20px;
-	margin-left: 6px;
-	border-radius: .5rem;
-	background-color: #94d6a4;
-	vertical-align: middle;
+	width: 135px;
+	font-size: 1rem;
 }
-
-.skill i:after {
+.skill dt {
+	width: 85px;
+	position: relative;
+	top: -16px;
+	vertical-align: bottom;
+}
+.skill dd {
+	width: 145px;
+	height: 1.25rem;
+	border-radius: .5rem;
+	margin-left: 10px;
+	line-height: 1.25rem;
+	background-color: #636363;
+	margin-bottom: 16px;
+}
+.skill dd:after {
 	content: "";
 	display: block;
 	height: 100%;
-	width: 80%;
 	border-radius: .5rem;
-	background-color: #306f60;
+	background-color: #f4f4f4;
 }
 
-.skill > p:nth-child(1)  i:after{
-	width: 85%;
+.skill dd:nth-of-type(1):after{
+	width: 70%;
 }
-.skill > p:nth-child(2)  i:after{
-	width: 80%;
-}
-.skill > p:nth-child(3)  i:after{
-	width: 90%;
-}
-.skill > p:nth-child(4)  i:after{
+.skill  dd:nth-of-type(2):after{
 	width: 65%;
 }
-.skill > p:nth-child(5)  i:after{
-	width: 60%;
+
+.skill  dd:nth-of-type(3):after{
+	width: 75%;
+}
+.skill  dd:nth-of-type(4):after{
+	width: 50%;
+}
+.skill  dd:nth-of-type(5):after{
+	width: 50%;
+}
+.skill  dd:nth-of-type(6):after{
+	width: 30%;
+}
+.skill  dd:nth-of-type(7):after{
+	width: 30%;
+}
+.card-footer {
+	padding-top: 100px;
+	margin-top: 100px;
 }
 
-/*footer信息*/
-.aside .card-footer {
-	padding-top: 57px;
-	font-size: 14px;
-	line-height: 0;
-	bottom: 0;
-	padding-bottom: 0;
+
+
+/*主要内容*/
+main {
+	background-color: #f9f9f9;
+	color:#424242;
+}
+/*每个title*/
+main h5 {
+	border-radius: .25rem;
+	padding: 0 15px;
+	background-color: #9d9d9d;
+	background-color: #212121;
+	color: #f4f4f4;
+	line-height: 45px;
+}
+main .card-block div{
+	margin-top: 20px;
+	padding-left: 15px;
+	height: 125px;
+}
+/*掌握技术*/
+img {
+	width: 125px;
+	vertical-align: top;
+	margin-right: 15px;
+	transition: transform .5s;
 }
 
-.aside .card-footer a {
-	color:#fff;
-} 
-
-.card-footer a i:hover {
-	color: #16736b;
+img:hover {
+	transform: scale(1.2);
 }
 
-.card-footer span {
-
-	vertical-align: middle;
-}
-
-.main {
-	color:#000;
-	background-color: #bae3c3;
-	background-color: #e3eff3;
-}
-
-/*文字简述*/
-.main .card {
-	background-color: #e3eff3;
-	border:none;
-}
-	
-.main .card-title {
-	font-weight: 700;
-}
-
-.main dt a {
-	color: #5dc3bb;
-	color:#94d6a4;
-	color:#a8ddb5;
+main a{
+	font-weight: 900;
+	font-size: 1.5rem;
 	text-decoration: underline;
-	color:#1dc546;
-
 }
 
-/*.main dt span {
-	color: #fff;
-	font-size: .75rem;
-}*/
-
-/* .main dt span {
-	float: right;
-	background: #000;
-	background-color:#a8ddb5;
-	margin-left: 10px;
-	padding: 3px 5px;
-	color:#306f60;
+main a + span {
+	display: block;
+	position: relative;
+	top: -60px;
+	left: 145px;
 }
- */
