@@ -282,6 +282,7 @@ window.onload = function () {
 
 var headerBar = document.getElementById('header-bar');
 var anchorBar = document.getElementById('anchor-bar');
+console.log(headerBar)
 window.onscroll = function () {
 	var scrollTop = document.body.scrollTop || document.documentElement.scrollTop;
 	if (scrollTop < 600) {
@@ -294,11 +295,9 @@ window.onscroll = function () {
 	}
 	if (scrollTop >= 789) {
 		//不然就遮住了顶部啊。。
-		headerBar.display = "fixed";
 		headerBar.style.top = 0 + "px";
 	}
 	else {
-		headerBar.display = "none";
 		headerBar.style.top = -150 + "px";
 	}
 }
@@ -306,28 +305,28 @@ var aa = anchorBar.getElementsByTagName('a');
 for (var i = 0; i < aa.length; i++) {
 	//点击左侧锚链接，滚到到它所对应的位置。（JS运动，不会直接跳转到）
 	aa[i].onclick = function () {
+
 		var index = this.href.indexOf("#")
 		var targetId = this.href.slice(this.href.indexOf("#") + 1);
 		var targetDom = document.getElementById(targetId);
 		var scrollTop = document.body.scrollTop || document.documentElement.scrollTop;
 		var targetTop = targetDom.offsetTop - 35;
-		speed3 = (targetTop - scrollTop) / 10;   //运动次数固定，根据不同距离计算speed
+		speed = (targetTop - scrollTop) / 10;   //运动次数固定，根据不同距离计算speed
 		var timm = setInterval(function () {
 			scrollTop = document.body.scrollTop || document.documentElement.scrollTop;
-			if (Math.abs(targetTop - scrollTop) < Math.abs(speed3)) {
+			if (Math.abs(targetTop - scrollTop) < Math.abs(speed)) {
+				//小于一次滚动距离就关闭定时器
 				clearInterval(timm);
 			}
 			else {
-				var z = scrollTop + speed3;
-				window.scrollTo(0, z);
+				//滚动
+				window.scrollTo(0, scrollTop + speed);
 			}
 		},30)
 		return false;
 	}
 }
 
-// TODO
-// 翻牌效果
 
 // Q1 .anchor-bar 自滚动active状态。。？。。
 // Q2出现滚动条后左右移动。。右边间距问题？

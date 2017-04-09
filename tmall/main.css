@@ -1305,6 +1305,7 @@ nav li:hover .hover-pic {
 }
 /*固定的头部*/
 .header-bar {
+	position: fixed;
 	top: -50px;
 	width: 100%;
 	height: 50px;
@@ -1396,7 +1397,8 @@ nav li:hover .hover-pic {
 .anchor-bar li i {
 	display: block;
 	width: 36px;
-	padding-top: 5px;
+	padding-top: 2px;
+	margin-left: -7px;
 	font-size: 18px;
 	line-height: 13px;
 }
