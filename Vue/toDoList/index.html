@@ -40,7 +40,7 @@
 				<input type="checkbox" name=""  v-on:click = "doneToDoing(done)" v-model="done.flag">
 				<p v-bind:title="done.text" v-on:click="showEditInput(done)">
 					{{done.text}}
-					<input type="text" v-bind:class="{showEditInput:done === editText}" v-focus="editText === done"  v-on:blur="editText = ''" v-model="done.text" v-on:keyup.13="editText = ''">
+					<input type="text" v-bind:class="{showEditInput:done === editText}" v-focus="editText === done"  v-on:blur="editText = ''" v-model="done.text" v-on:keyup.13="editText = ''" v-on:keyup.esc="done.text = oldText;editText = ''">
 				</p>
 				<span v-on:click = "deleteList(done, doneLists)"></span>
 			</li>
