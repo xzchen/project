@@ -1,5 +1,4 @@
 window.onload = function () {
-	document.getElementById('imgTodoList').src = "https://raw.githubusercontent.com/xzchen/project/gh-pages/Vue/toDoList/toDoList.gif";
 	var imgs = document.querySelectorAll("main img");
 	var imgsHref = []  //记录每张展示demo图片所关联的a的在线demo链接
 	var showImages = document.getElementById('showImages');
@@ -7,8 +6,8 @@ window.onload = function () {
 	for (var i = 0; i < imgs.length; i++) {
 		imgs[i].index = i;  //根据此上传的index从imgsHref下获得链接地址
 		imgsHref.push(imgs[i].parentNode.getElementsByTagName('a')[0].href)
-		imgs[i].onclick = function () {
-			showImage.src = this.src;
+		imgs[i].onmouseover = function () {
+			showImage.src = this.index!==0?this.src:imgs[1].src;  //onmouseover状态出现大图展示demo动态效果。其余的还没录，先就这样。
 			showImage.index = this.index;
 			showImages.style.zIndex = 0;
 		}
@@ -27,6 +26,9 @@ window.onload = function () {
 
 	showImages.onclick = function () {
 		this.style.zIndex =  -1;
+		showImage.src = "";
 	}
 }
 
+// TODO
+// 完成所有视频的录制。做成gif图。
