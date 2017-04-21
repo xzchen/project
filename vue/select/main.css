@@ -1,0 +1,50 @@
+#app {
+	position: absolute;
+	top: 0;
+	right: 0;
+	left:0;
+	width: 768px;
+	height: 185px;
+	bottom: 0;
+	margin:auto;
+	background: #ccc;
+}
+
+.select{
+	float: left;
+	width: calc(100%/3 - 10px);
+	text-align: center;
+	margin: 0 5px 0 5px;
+	line-height: 30px;
+}
+
+input {
+	border:0;
+	font-size: inherit;
+	text-align: center;
+	box-shadow: 1px 1px 1px 1px #999;
+}
+input[type="text"] {
+	width: 150px;
+}
+input[type="button"] {
+	outline: 0;
+	
+}
+
+#app div 
+
+ul {
+	padding: 0;
+}
+li {
+	list-style-type: none;
+	cursor: pointer;
+}
+
+li:nth-child(odd) {
+	background: #9e9b9b;
+}
+li:nth-child(even) {
+	background: #565656;
+}
