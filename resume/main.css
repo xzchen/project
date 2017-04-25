@@ -170,7 +170,7 @@ main a + span {
 }
 
 /*鼠标移动到demo图片上，展示demo图片的浮出层。*/
-#showImages {
+#showImageContainer {
 	position: fixed;
 	top: 0;
 	right: 0;
@@ -181,7 +181,7 @@ main a + span {
 }
 
 /*当前展示的图片*/
-#showImage {
+#showImageContainer img {
 	position: absolute;
 	top: 50%;
 	left: 50%;
@@ -189,4 +189,5 @@ main a + span {
 	height: 400px;
 	margin-top: -150px;
 	margin-left: -250px;
+	z-index:0;
 }
