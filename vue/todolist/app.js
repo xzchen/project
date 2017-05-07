@@ -78,7 +78,7 @@ var todoList = JSON.parse(localStorage.getItem('todoList'))  //从字符串中�
 new Vue({
 	el: '#app',
 	data: {
-		newTodoText: '',
+		newTodoText: '', 
 		todoList: todoList,
 		edit: '',
 		oldText: '',
@@ -95,15 +95,15 @@ new Vue({
 			}
 		},
 		showEdit(todo) {
-			this.edit = todo;
+			this.edit = todo;   //edit引用todo，这样todo改变edit也会改变
 			this.oldText = todo.text; //showEidt里记录下原有的值，当用户不想修改的时候按住esc可以直接返回oldText的值
 		},
 		changeValue(todo) {
 			if (!todo.text) {
 				alert("项目不能为空")
-				todo.text = this.oldText;
+				todo.text = this.oldText;  //changeValue的时候只修改值而不改变flag状态，所以就直接改text就好（v-model指令是双向绑定。这是为空的情况）。
 			}
-			this.edit = '';
+			this.edit = '';   //对象的引用，一个对象置空后不影响另一对象。
 		}
 	},
 	watch: {
@@ -116,10 +116,10 @@ new Vue({
 	},
 	computed: {
 		doingLength() {
-			return this.todoList.filter(function(item){return item.flag === false}).length;
+			return this.todoList.filter(item => item.flag === false).length; //计算属性。根据todo.flag过滤
 		},
 		doneLength() {
-			return this.todoList.filter(function(item){return item.flag === true}).length;
+			return this.todoList.filter(item => item.flag === true).length;
 		}
 	}
 })
